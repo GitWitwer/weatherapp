@@ -22,7 +22,6 @@ def safety():
   temp=dictionary['temp']
   hum_num=int(dictionary['hum'].strip('%'))
   wind=dictionary['wind']
-  temp=80
   if temp>40:
     if temp> 100 or (temp> 90 and hum_num>55):
       dictionary['message'] = "TOO HOT DO NOT GO OUTSIDE!!!!"
