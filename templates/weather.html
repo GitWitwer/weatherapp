@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">body {
+  background: beige;
+  color: mediumorchid;
+}
+	
+</style>
+	<title> </title>
+</head>
+<body>Current temperature in {{weather.location}} is: {{weather.temp}}&deg;F with {{weather.hum}} and wind {{weather.wind}} mph
+<br/>{{weather.message}}
+<br/><img src="{{url_for('static', filename=weather.image)}}" />
+</body>
+</html>
