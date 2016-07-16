@@ -25,20 +25,24 @@ def safety():
   if temp>40:
     if temp> 100 or (temp> 90 and hum_num>55):
       dictionary['message'] = "TOO HOT DO NOT GO OUTSIDE!!!!"
+      dictionary['image']="hot.jpg" 
     elif 40< temp<= 84 or (84 <= temp <90 and hum_num<65.1):
        dictionary['message'] ="Have fun outside!!"
-       dictionary['image']="play.png"  
+       dictionary['image']="gooutside.jpg"  
     else: 
       dictionary['message'] ="Caution only go outside for 10 minutes"
-      dictionary['image']="hotdog.jpg"  
+      dictionary['image']="caution.jpg"  
   else:
     if temp< 10 or (10<=temp<= 20 and wind>5):
        dictionary['message'] = "TOO COLD DO NOT GO OUTSIDE!!!!"
+       dictionary['image']="tocold.jpg" 
       
     elif 40<=temp<45 and wind<=15:
        dictionary['message'] ="Have fun outside!!"
+       dictionary['image']="gooutside.jpg"  
     else: 
        dictionary['message'] = "Caution only go outside for 10 minutes"  
+       dictionary['image']="coldwarning.jpg" 
   return render_template("weather.html", weather=dictionary) 
 if __name__=="__main__":
    app.run(debug=True)
